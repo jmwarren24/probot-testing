@@ -15,10 +15,10 @@ const postFruits = (fruit) => {
             fruits.push(fruit);
             let err = false;
             if(!err) {
-                resolve();
+                resolve();  //Go ahead and run the '.then' part of the command
             }
             else {
-                reject("Something went wrong");
+                reject("Something went wrong"); //print err if something goes wrong with the appending to the fruits list.
             }
         }, 2000);
     });
