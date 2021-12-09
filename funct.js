@@ -1,15 +1,13 @@
 //jshint esversion:6
 
-// 2 Ways to write functions.  I think the first is deprecated after esversion:5
-
-function print (data) {
-    console.log(data);
-}
-
-const prnt = (data) => {
+const print = (data) => {
     console.log(data);
 };
 
-print("test");
+const opt = (data) => {
+    console.log(data);
+    console.log(data);
+};
 
-prnt("testing");
+module.exports.print = print;
+module.exports.opt = opt;
