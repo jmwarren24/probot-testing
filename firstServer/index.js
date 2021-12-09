@@ -1,6 +1,10 @@
-const http = require("http");
+const express = require("express");
+const app = express();
 
-http.createServer((req,res) => {
-    res.write("Server is up and running");
-    res.end();
-}).listen(3000);
+app.get("/",(req,res)=> {
+    res.send("Server is up and running");
+});
+
+app.listen(3000,()=> {
+    console.log("Server is up and running");
+});
